@@ -1,7 +1,7 @@
 # SENVYR DevSecOps Starter
 
 Kit autonome de contrôle qualité et sécurité pour projets **Node.js/npm**.
-Version initiale : `0.1.0` (proposition à valider avant publication).
+Version initiale : `0.1.0` (préversion publique en cours de validation).
 
 Conçu à partir du workflow `NS54 - Quality Gate` validé le 13 novembre 2026.
 Il ne contient **aucun code métier, secret ou exception Gitleaks de NS54**.
@@ -49,8 +49,8 @@ Sur Windows, utiliser un chemin Windows :
 node .\bin\senvyr-devsecops.mjs --target C:\Projets\MonApplication --apply
 ```
 
-Après publication sur GitHub avec une version immuable, un lancement à distance via `npx` peut être configuré.
-**Aucune commande distante n'est annoncée comme opérationnelle tant que le dépôt n'est pas publié et testé.**
+Commande distante testée en simulation depuis la racine du projet :
+`npm exec --yes --package="github:SambaSENE/senvyr-devsecops-starter#cddcfff" -- senvyr-devsecops --target .`
 
 ## Installer dans un nouveau projet
 
