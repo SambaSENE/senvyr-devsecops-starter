@@ -1,0 +1,19 @@
+// Les projets pourront ecrire leurs fichiers .log dans monitoring/runtime-logs/.
+// Aucune connexion au socket Docker n'est necessaire.
+loki.source.file "senvyr_logs" {
+  targets = [
+    {__path__ = "/var/log/senvyr/*.log", job = "senvyr-file"},
+  ]
+  forward_to = [loki.write.local.receiver]
+
+  file_match {
+    enabled     = true
+    sync_period = "10s"
+  }
+}
+
+loki.write "local" {
+  endpoint {
+    url = "http://loki:3100/loki/api/v1/push"
+  }
+}
