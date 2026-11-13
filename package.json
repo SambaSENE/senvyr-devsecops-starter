@@ -1,0 +1,21 @@
+{
+  "name": "senvyr-devsecops-starter",
+  "version": "0.1.0",
+  "description": "Installateur prudent de Quality Gates GitHub Actions pour projets Node/npm",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "senvyr-devsecops": "./bin/senvyr-devsecops.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "files": [
+    "bin",
+    "templates",
+    "README.md"
+  ]
+}
